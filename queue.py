@@ -24,9 +24,16 @@ class Queue:
         return elem
 
     def print(self):
-        i=0
-        for i in range(0,self.size()):
-            print(self.queue[i])
+        aux = Queue(1000)
+        while self.size() > 0:
+            x = self.pop()
+            print(x)
+            aux.push(x)
+        
+        while aux.size()>0:
+            self.push(aux.pop())
+        #for i in range(0,self.size()):
+        #    print(self.queue[i])
 
 
 if __name__ == '__main__':
