@@ -5,6 +5,11 @@ class Stack:
     
     def size(self):
         return self.count
+
+    def isEmpyt(self):
+        if self.size() == 0:
+            return True
+        return False
     
     def push(self,elem):
         self.stack[self.size()] = elem

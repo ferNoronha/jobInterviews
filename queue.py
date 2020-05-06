@@ -4,6 +4,11 @@ class Queue:
         self.queue = [None]*size
         self.count = 0
 
+    def isEmpty(self):
+        if self.size() == 0:
+            return True
+        return False
+
     def push(self,elem):
         self.queue[self.size()] = elem 
         self.count += 1
